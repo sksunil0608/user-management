@@ -6,11 +6,11 @@ import AuthContext from '../store/auth-context';
 
 
 const MainHeader = (props) => {
-  const ctx = useContext(AuthContext);
+  const authCtx = useContext(AuthContext);
   return (
     <header className={classes['main-header']}>
       <h1>A Typical Page</h1>
-      <Navigation  onLogout={ctx.onLogout} />
+      <Navigation  onLogout={authCtx.onLogout} />
     </header>
   );
 };
